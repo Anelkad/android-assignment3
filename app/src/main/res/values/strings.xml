@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Assignment 3</string>
+    <string name="name">BookStore</string>
+    <string name="splash_description_text">Welcome to my exclusive store</string>
+    <string name="splash_button_title">shop now</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forget_password">Forget password?</string>
+    <string name="signup">Sign Up</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="confirmPassword">Confirm Password</string>
+
 </resources>
