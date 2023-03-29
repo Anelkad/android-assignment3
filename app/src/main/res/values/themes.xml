@@ -3,6 +3,12 @@
     <style name="Theme.Assignment3" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="colorControlHighlight">@color/black</item>
+        <item name="android:colorControlHighlight">@color/black</item>
+        <item name="colorAccent">@color/dark_color</item>
+        <item name="selectableItemBackground">@drawable/edittext_bg</item>
+        <item name="android:selectableItemBackground">@drawable/edittext_bg</item>
+
     </style>
 
     <style name="Theme.Assignment3.NoActionBar">

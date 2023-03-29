@@ -40,6 +40,7 @@
         android:id="@+id/password"
         android:hint="@string/password"
         android:layout_width="@dimen/width"
+        android:inputType="textPassword"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_top"
         android:background="@drawable/edittext_bg"

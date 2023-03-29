@@ -7,5 +7,5 @@
     <dimen name="width">380dp</dimen>
     <dimen name="corner">5dp</dimen>
     <dimen name="margin_top">19dp</dimen>
-
+    <dimen name="progressbar_size">50dp</dimen>
 </resources>

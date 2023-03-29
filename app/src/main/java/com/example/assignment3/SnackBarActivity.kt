@@ -1,5 +1,6 @@
  package com.example.assignment3
 
+import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
@@ -8,6 +9,7 @@ import com.google.android.material.snackbar.Snackbar
 
 open class SnackBarActivity : AppCompatActivity() {
 
+    private lateinit var waitDialog: Dialog
     fun showSnackBar(message: String, isError: Boolean){
         val snackBar = Snackbar.make(findViewById(android.R.id.content),message,Snackbar.LENGTH_LONG)
         val snackBarView = snackBar.view
@@ -24,5 +26,19 @@ open class SnackBarActivity : AppCompatActivity() {
             )
         }
         snackBar.show()
+    }
+
+    fun showWaitDialog(){
+        waitDialog = Dialog(this)
+        waitDialog.setContentView(R.layout.wait_dialog)
+
+        waitDialog.setCancelable(false)
+        waitDialog.setCanceledOnTouchOutside(false)
+
+        waitDialog.show()
+    }
+
+    fun hideWaitDialog(){
+        waitDialog.dismiss()
     }
 }
