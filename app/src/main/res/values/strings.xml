@@ -12,4 +12,10 @@
     <string name="lastName">Last Name</string>
     <string name="confirmPassword">Confirm Password</string>
 
+    <string name="emailIsEmpty">Please enter Email field!</string>
+    <string name="passwordIsEmpty">Please enter Password field!</string>
+    <string name="firstNameIsEmpty">Please enter First Name field!</string>
+    <string name="lastNameIsEmpty">Please enter Last Name field!</string>
+    <string name="confirmPasswordIsEmpty">Please enter Confirm Password field!</string>
+
 </resources>
