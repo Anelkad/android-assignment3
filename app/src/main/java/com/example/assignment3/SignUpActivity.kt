@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
@@ -88,10 +89,8 @@ class SignUpActivity : SnackBarActivity() {
 
                     if (it.isSuccessful) {
                         val firebaseUser: FirebaseUser = it.result!!.user!!
-                        showSnackBar(
-                            resources.getString(R.string.successSignUp,firebaseUser.uid),
-                            false
-                        )
+                        Toast.makeText(this,resources.getString(R.string.successSignUp,firebaseUser.uid),
+                            Toast.LENGTH_LONG).show()
 
                         FirebaseAuth.getInstance().signOut()
                         startLoginActivity()
