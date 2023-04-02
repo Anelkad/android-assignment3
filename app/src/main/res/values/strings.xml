@@ -19,7 +19,7 @@
     <string name="confirmPasswordIsEmpty">Please enter Confirm Password field!</string>
     <string name="passwordNotEqual">Password and Confirm Password are not equal!</string>
     <string name="successSignUp">Successfully Sign Up user!</string>
-    <string name="successLogIn">Successfully LogIn!</string>
+    <string name="successLogIn">Successfully Log In!</string>
 
     <string name="please_wait">Please wait...</string>
     <string name="forgetPassword_description">Enter your email address, we will send email to reset password</string>

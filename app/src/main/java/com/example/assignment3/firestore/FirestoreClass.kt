@@ -17,9 +17,6 @@ class FirestoreClass {
         mFireStore.collection("users")
             .document(userInfo.id)
             .set(userInfo, SetOptions.merge())
-            .addOnSuccessListener{
-                activity.userSignupSuccess()
-            }
             .addOnFailureListener { e->
                 Log.e(
                     activity.javaClass.simpleName,

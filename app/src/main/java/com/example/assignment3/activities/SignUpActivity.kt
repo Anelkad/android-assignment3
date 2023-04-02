@@ -107,6 +107,9 @@ class SignUpActivity : SnackBarActivity() {
 
                         FirestoreClass().signupUser(this@SignUpActivity, user)
 
+                        Toast.makeText(this@SignUpActivity,resources.getString(R.string.successSignUp),
+                            Toast.LENGTH_LONG).show()
+
                         FirebaseAuth.getInstance().signOut()
                         startLoginActivity()
 
@@ -117,8 +120,4 @@ class SignUpActivity : SnackBarActivity() {
 
         }
     }
-    fun userSignupSuccess(){
-            Toast.makeText(this,resources.getString(R.string.successSignUp),
-                Toast.LENGTH_LONG).show()
-        }
 }
