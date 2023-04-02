@@ -1,11 +1,13 @@
-package com.example.assignment3
+package com.example.assignment3.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import com.example.assignment3.R
+import com.example.assignment3.firestore.FirestoreClass
+import com.example.assignment3.models.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
@@ -47,26 +49,32 @@ class SignUpActivity : SnackBarActivity() {
 
         return when{
             firstName.isEmpty() -> {
+                hideWaitDialog()
                 showSnackBar(resources.getString(R.string.firstNameIsEmpty),true)
                 false
             }
             lastName.isEmpty() -> {
+                hideWaitDialog()
                 showSnackBar(resources.getString(R.string.lastNameIsEmpty),true)
                 false
             }
             email.isEmpty() -> {
+                hideWaitDialog()
                 showSnackBar(resources.getString(R.string.emailIsEmpty),true)
                 false
             }
             password.isEmpty() -> {
+                hideWaitDialog()
                 showSnackBar(resources.getString(R.string.passwordIsEmpty),true)
                 false
             }
             confirmPassword.isEmpty() -> {
+                hideWaitDialog()
                 showSnackBar(resources.getString(R.string.confirmPasswordIsEmpty),true)
                 false
             }
             confirmPassword!= password -> {
+                hideWaitDialog()
                 showSnackBar(resources.getString(R.string.passwordNotEqual),true)
                 false
             }
@@ -89,8 +97,15 @@ class SignUpActivity : SnackBarActivity() {
 
                     if (it.isSuccessful) {
                         val firebaseUser: FirebaseUser = it.result!!.user!!
-                        Toast.makeText(this,resources.getString(R.string.successSignUp,firebaseUser.uid),
-                            Toast.LENGTH_LONG).show()
+
+                        val user = User(
+                            firebaseUser.uid,
+                            firstName,
+                            lastName,
+                            email
+                        )
+
+                        FirestoreClass().signupUser(this@SignUpActivity, user)
 
                         FirebaseAuth.getInstance().signOut()
                         startLoginActivity()
@@ -101,6 +116,9 @@ class SignUpActivity : SnackBarActivity() {
                 }
 
         }
-
     }
+    fun userSignupSuccess(){
+            Toast.makeText(this,resources.getString(R.string.successSignUp),
+                Toast.LENGTH_LONG).show()
+        }
 }

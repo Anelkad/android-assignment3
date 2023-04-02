@@ -1,8 +1,9 @@
-package com.example.assignment3
+package com.example.assignment3.activities
 
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.assignment3.R
 
 
 class MainActivity : AppCompatActivity() {

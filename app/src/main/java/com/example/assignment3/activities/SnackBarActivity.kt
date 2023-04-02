@@ -1,10 +1,9 @@
- package com.example.assignment3
+ package com.example.assignment3.activities
 
 import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.widget.TextView
 import androidx.core.content.ContextCompat
+import com.example.assignment3.R
 import com.google.android.material.snackbar.Snackbar
 
 open class SnackBarActivity : AppCompatActivity() {
@@ -17,12 +16,12 @@ open class SnackBarActivity : AppCompatActivity() {
 
         if (isError){
             snackBarView.setBackgroundColor(
-                ContextCompat.getColor(this,R.color.colorSnackBarError)
+                ContextCompat.getColor(this, R.color.colorSnackBarError)
             )
         }
         else{
             snackBarView.setBackgroundColor(
-                ContextCompat.getColor(this,R.color.colorSnackBarSuccess)
+                ContextCompat.getColor(this, R.color.colorSnackBarSuccess)
             )
         }
         snackBar.show()

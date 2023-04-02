@@ -1,10 +1,10 @@
-package com.example.assignment3
+package com.example.assignment3.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import com.example.assignment3.R
 import com.google.firebase.auth.FirebaseAuth
 
 class ForgetPasswordActivity : SnackBarActivity() {

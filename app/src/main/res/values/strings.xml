@@ -18,12 +18,12 @@
     <string name="lastNameIsEmpty">Please enter Last Name field!</string>
     <string name="confirmPasswordIsEmpty">Please enter Confirm Password field!</string>
     <string name="passwordNotEqual">Password and Confirm Password are not equal!</string>
-    <string name="successSignUp">Success! User id is %1$s</string>
-    <string name="successLogIn">Success LogIn!</string>
+    <string name="successSignUp">Successfully Sign Up user!</string>
+    <string name="successLogIn">Successfully LogIn!</string>
 
     <string name="please_wait">Please wait...</string>
     <string name="forgetPassword_description">Enter your email address, we will send email to reset password</string>
     <string name="submit">Submit</string>
     <string name="emailIsSend">Email send successfully to reset password!</string>
-    
+
 </resources>

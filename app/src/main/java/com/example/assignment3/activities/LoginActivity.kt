@@ -1,13 +1,14 @@
-package com.example.assignment3
+package com.example.assignment3.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract.CommonDataKinds.Email
-import android.text.TextUtils
+import android.util.Log
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import com.example.assignment3.R
+import com.example.assignment3.firestore.FirestoreClass
+import com.example.assignment3.models.User
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : SnackBarActivity() {
@@ -62,10 +63,12 @@ class LoginActivity : SnackBarActivity() {
 
         return when{
             email.isEmpty() -> {
+                hideWaitDialog()
                 showSnackBar(resources.getString(R.string.emailIsEmpty),true)
                 false
             }
             password.isEmpty() -> {
+                hideWaitDialog()
                 showSnackBar(resources.getString(R.string.passwordIsEmpty),true)
                 false
             }
@@ -87,14 +90,22 @@ class LoginActivity : SnackBarActivity() {
                     hideWaitDialog()
 
                     if (it.isSuccessful) {
+                        FirestoreClass().getUserDetails(this@LoginActivity)
                         Toast.makeText(this,resources.getString(R.string.successLogIn),
                             Toast.LENGTH_LONG).show()
-                        startMainActivity()
                     } else {
                         showSnackBar(it.exception!!.message.toString(),true)
                     }
                 }
         }
+    }
+
+    fun userLoggedInSuccess(user: User){
+        Log.i("First name: ", user.firstName)
+        Log.i("Last name: ", user.lastName)
+        Log.i("Email: ", user.email)
+
+        startMainActivity()
     }
 
 }
