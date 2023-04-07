@@ -2,6 +2,8 @@ package com.example.assignment3.firestore
 
 import android.app.Activity
 import android.util.Log
+import com.example.assignment3.activities.DashboardAdminActivity
+import com.example.assignment3.activities.DashboardUserActivity
 import com.example.assignment3.activities.LoginActivity
 import com.example.assignment3.activities.SignUpActivity
 import com.example.assignment3.models.User
@@ -47,6 +49,8 @@ class FirestoreClass {
 
                 when (activity){
                     is LoginActivity -> activity.userLoggedInSuccess(user)
+                    is DashboardUserActivity -> activity.getDashboard(user)
+                    is DashboardAdminActivity -> activity.getDashboard(user)
                 }
             }
     }

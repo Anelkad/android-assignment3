@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DashboardUserActivity">
+
+    <RelativeLayout
+        android:layout_width="@dimen/width"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dashboard_bg"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:padding="@dimen/padding"
+        android:layout_marginTop="@dimen/margin_top">
+
+    <TextView
+        android:id="@+id/dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dashboard_user"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/button_text_size"
+        android:paddingStart="@dimen/padding_dashboard"/>
+        
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="a@a.com"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/button_text_size"
+        android:paddingStart="@dimen/padding_dashboard"
+        android:layout_below="@+id/dashboard"/>
+
+    <ImageView
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_logout_24"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/padding"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

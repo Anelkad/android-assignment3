@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.EditBookActivity">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dashboard_bg"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EDIT BOOK"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:paddingStart="40dp"/>
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            android:padding="@dimen/padding"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/title"
+        android:hint="Title"
+        android:layout_width="@dimen/width"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="@dimen/margin_top"
+        android:background="@drawable/edittext_bg"
+        android:padding="@dimen/padding"
+        android:textSize="@dimen/button_text_size"
+        android:layout_below="@+id/top"/>
+
+    <EditText
+        android:id="@+id/description"
+        android:hint="Description"
+        android:layout_width="@dimen/width"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="@dimen/margin_top"
+        android:background="@drawable/edittext_bg"
+        android:padding="@dimen/padding"
+        android:textSize="@dimen/button_text_size"
+        android:layout_below="@+id/title"/>
+
+    <EditText
+        android:id="@+id/cost"
+        android:hint="Cost"
+        android:layout_width="@dimen/width"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="@dimen/margin_top"
+        android:background="@drawable/edittext_bg"
+        android:padding="@dimen/padding"
+        android:textSize="@dimen/button_text_size"
+        android:layout_below="@+id/description"/>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="@dimen/width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cost"
+        android:layout_margin="@dimen/margin_top"
+        android:background="@drawable/button_bg"
+        android:text="@string/submit"
+        android:textSize="@dimen/button_text_size"/>
+
+
+</RelativeLayout>

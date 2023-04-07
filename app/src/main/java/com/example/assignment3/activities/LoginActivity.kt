@@ -51,8 +51,14 @@ class LoginActivity : SnackBarActivity() {
         startActivity(intent)
     }
 
-    private fun startMainActivity(){
-        val intent = Intent (this, MainActivity::class.java)
+    private fun startDashboardUserActivity(){
+        val intent = Intent (this, DashboardUserActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    private fun startDashboardAdminActivity(){
+        val intent = Intent (this, DashboardAdminActivity::class.java)
         startActivity(intent)
         finish()
     }
@@ -104,8 +110,13 @@ class LoginActivity : SnackBarActivity() {
         Log.i("First name: ", user.firstName)
         Log.i("Last name: ", user.lastName)
         Log.i("Email: ", user.email)
+        Log.i("Role: ", user.role)
 
-        startMainActivity()
+        if (user.role=="admin"){
+            startDashboardAdminActivity()
+        }else if (user.role=="client"){
+            startDashboardUserActivity()
+        }
     }
 
 }
