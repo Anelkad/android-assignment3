@@ -20,8 +20,9 @@
             android:text="EDIT BOOK"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:textSize="25sp"
-            android:paddingStart="40dp"/>
+            android:textSize="@dimen/button_text_size"
+            android:paddingStart="40dp"
+            android:paddingTop="@dimen/padding"/>
 
         <ImageView
             android:id="@+id/back"
@@ -39,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="@dimen/margin_top"
-        android:background="@drawable/edittext_bg"
+        android:background="@drawable/dashboard_button"
         android:padding="@dimen/padding"
         android:textSize="@dimen/button_text_size"
         android:layout_below="@+id/top"/>
@@ -51,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="@dimen/margin_top"
-        android:background="@drawable/edittext_bg"
+        android:background="@drawable/dashboard_button"
         android:padding="@dimen/padding"
         android:textSize="@dimen/button_text_size"
         android:layout_below="@+id/title"/>
@@ -63,7 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="@dimen/margin_top"
-        android:background="@drawable/edittext_bg"
+        android:background="@drawable/dashboard_button"
         android:padding="@dimen/padding"
         android:textSize="@dimen/button_text_size"
         android:layout_below="@+id/description"/>

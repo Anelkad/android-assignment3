@@ -30,6 +30,20 @@ class BookListAdminActivity : AppCompatActivity() {
 
         loadBookList()
 
+        binding.descending.setOnClickListener {
+            bookList.sortByDescending { list -> list.cost }
+            updateBookListAdapter()
+        }
+
+        binding.ascending.setOnClickListener {
+            bookList.sortWith(compareBy { it.cost })
+            updateBookListAdapter()
+        }
+
+        binding.clear.setOnClickListener {
+            loadBookList()
+        }
+
         binding.searchBook.addTextChangedListener(object: TextWatcher{
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
@@ -65,13 +79,17 @@ class BookListAdminActivity : AppCompatActivity() {
                         bookList.add(book)
                     }
                 }
-                adapterBookAdmin = AdapterBookAdmin(this@BookListAdminActivity,bookList)
-                binding.bookList.adapter = adapterBookAdmin
+                updateBookListAdapter()
             }
 
             override fun onCancelled(error: DatabaseError) {
 
             }
         })
+    }
+
+    private fun updateBookListAdapter(){
+        adapterBookAdmin = AdapterBookAdmin(this@BookListAdminActivity,bookList)
+        binding.bookList.adapter = adapterBookAdmin
     }
 }
