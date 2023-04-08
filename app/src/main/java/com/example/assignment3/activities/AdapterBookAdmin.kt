@@ -41,6 +41,7 @@ class AdapterBookAdmin: RecyclerView.Adapter<AdapterBookAdmin.HolderBookAdmin>, 
         val description = binding.bookDescription
         val cost = binding.bookCost
         val more = binding.more
+        val itemView = binding.itemView
 
     }
 
@@ -57,6 +58,12 @@ class AdapterBookAdmin: RecyclerView.Adapter<AdapterBookAdmin.HolderBookAdmin>, 
 
         holder.more.setOnClickListener {
              moreOptionsDialog(book,holder)
+        }
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context,BookDetailsActivity::class.java)
+            intent.putExtra("id",id)
+            context.startActivity(intent)
         }
 
     }
