@@ -30,6 +30,7 @@
         android:background="@drawable/edittext_bg"
         android:padding="@dimen/padding"
         android:textSize="@dimen/button_text_size"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title"
@@ -44,6 +45,7 @@
         android:background="@drawable/edittext_bg"
         android:padding="@dimen/padding"
         android:textSize="@dimen/button_text_size"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/firstName"
@@ -58,6 +60,7 @@
         android:background="@drawable/edittext_bg"
         android:padding="@dimen/padding"
         android:textSize="@dimen/button_text_size"
+        android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lastName"
@@ -93,7 +96,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
-    <android.widget.Button
+    <Button
         android:id="@+id/signUpButton"
         android:layout_width="@dimen/width"
         android:layout_height="wrap_content"
@@ -104,8 +107,7 @@
         android:textSize="@dimen/button_text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmPassword"
-        android:background="@drawable/button_bg"/>
+        app:layout_constraintTop_toBottomOf="@+id/confirmPassword"/>
 
 
     <TextView

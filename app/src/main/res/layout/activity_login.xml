@@ -31,6 +31,7 @@
         android:background="@drawable/edittext_bg"
         android:padding="@dimen/padding"
         android:textSize="@dimen/button_text_size"
+        android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title"
@@ -51,19 +52,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
-    <android.widget.Button
+    <Button
         android:id="@+id/loginButton"
         android:layout_width="@dimen/width"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_top"
         android:text="@string/login"
         android:paddingHorizontal="25dp"
+        android:paddingVertical="10dp"
         android:textColor="@color/white"
         android:textSize="@dimen/button_text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        android:background="@drawable/button_bg"/>
+        app:layout_constraintTop_toBottomOf="@+id/password"/>
 
     <TextView
         android:id="@+id/forgetPassword"

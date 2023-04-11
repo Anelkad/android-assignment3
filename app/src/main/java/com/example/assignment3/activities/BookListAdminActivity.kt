@@ -5,12 +5,11 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
-import android.widget.TextView
 import com.example.assignment3.databinding.ActivityBookListAdminBinding
 import com.example.assignment3.models.Book
 import com.google.firebase.database.*
 
-class BookListAdminActivity : AppCompatActivity() {
+class BookListAdminActivity : SnackBarActivity() {
 
     lateinit var binding: ActivityBookListAdminBinding
 
@@ -51,7 +50,7 @@ class BookListAdminActivity : AppCompatActivity() {
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 try {
-                    adapterBookAdmin.filter!!.filter(s)
+                    adapterBookAdmin.filter.filter(s)
                 }
                 catch (e:Exception){
                     Log.d("text change","onTextChange: ${e.message}")
@@ -65,6 +64,8 @@ class BookListAdminActivity : AppCompatActivity() {
     }
 
     private fun loadBookList() {
+        showWaitDialog()
+
         bookList = ArrayList()
 
         database = FirebaseDatabase.getInstance("https://assignment3-afd18-default-rtdb.europe-west1.firebasedatabase.app").getReference("books")
@@ -80,6 +81,7 @@ class BookListAdminActivity : AppCompatActivity() {
                     }
                 }
                 updateBookListAdapter()
+                hideWaitDialog()
             }
 
             override fun onCancelled(error: DatabaseError) {

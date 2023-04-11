@@ -31,6 +31,7 @@ class EditBookActivity : SnackBarActivity() {
 
         binding.submit.setOnClickListener {
             editBook()
+            finish()
         }
 
         binding.back.setOnClickListener {

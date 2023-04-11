@@ -36,6 +36,7 @@
     <EditText
         android:id="@+id/title"
         android:hint="Title"
+        android:inputType="text"
         android:layout_width="@dimen/width"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
@@ -60,6 +61,7 @@
     <EditText
         android:id="@+id/cost"
         android:hint="Cost"
+        android:inputType="number"
         android:layout_width="@dimen/width"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
@@ -75,7 +77,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/cost"
         android:layout_margin="@dimen/margin_top"
-        android:background="@drawable/button_bg"
         android:text="@string/add"
         android:textSize="@dimen/button_text_size"/>
 

@@ -7,13 +7,13 @@
     tools:context=".activities.DashboardUserActivity">
 
     <RelativeLayout
-        android:layout_width="@dimen/width"
+        android:id="@+id/top"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/dashboard_bg"
         android:layout_centerHorizontal="true"
         android:orientation="vertical"
-        android:padding="@dimen/padding"
-        android:layout_marginTop="@dimen/margin_top">
+        android:padding="10dp">
 
     <TextView
         android:id="@+id/dashboard"
@@ -36,14 +36,26 @@
         android:paddingStart="@dimen/padding_dashboard"
         android:layout_below="@+id/dashboard"/>
 
-    <ImageView
-        android:id="@+id/logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_logout_24"
-        android:layout_alignParentEnd="true"
-        android:padding="@dimen/padding"/>
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/padding"
+            android:layout_marginStart="@dimen/padding"
+            android:layout_marginTop="@dimen/padding"
+            android:layout_marginEnd="@dimen/padding"
+            android:layout_marginBottom="@dimen/padding"
+            android:src="@drawable/baseline_logout_24" />
 
     </RelativeLayout>
+
+   <androidx.fragment.app.FragmentContainerView
+       android:id="@+id/fragment_container_view"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:name="com.example.assignment3.activities.BooksUserFragment"
+       tools:layout="@layout/fragment_books_user"
+       android:layout_below="@+id/top"/>
 
 </RelativeLayout>

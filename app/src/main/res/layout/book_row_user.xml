@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/card_padding"
+    app:cardCornerRadius="@dimen/card_padding"
+    app:contentPadding="@dimen/card_padding">
+
+    <RelativeLayout
+        android:id="@+id/itemView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/bookTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/card_text_size"
+            android:textColor="@color/dark_color"
+            android:text="Book"
+            android:padding="@dimen/card_padding"/>
+
+        <TextView
+            android:id="@+id/bookDescription"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bookTitle"
+            android:text="aaa"
+            android:textColor="@color/black"
+            android:textSize="@dimen/desc_text_size"
+            android:padding="@dimen/card_padding"/>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/bookCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textSize="@dimen/desc_text_size"
+                android:layout_marginTop="@dimen/card_padding"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$"
+                android:textSize="@dimen/desc_text_size"
+                android:layout_marginTop="@dimen/card_padding"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

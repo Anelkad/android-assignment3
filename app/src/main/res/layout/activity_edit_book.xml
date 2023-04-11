@@ -43,6 +43,7 @@
         android:background="@drawable/dashboard_button"
         android:padding="@dimen/padding"
         android:textSize="@dimen/button_text_size"
+        android:inputType="text"
         android:layout_below="@+id/top"/>
 
     <EditText
@@ -67,6 +68,7 @@
         android:background="@drawable/dashboard_button"
         android:padding="@dimen/padding"
         android:textSize="@dimen/button_text_size"
+        android:inputType="number"
         android:layout_below="@+id/description"/>
 
     <Button
@@ -75,7 +77,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/cost"
         android:layout_margin="@dimen/margin_top"
-        android:background="@drawable/button_bg"
         android:text="@string/submit"
         android:textSize="@dimen/button_text_size"/>
 
