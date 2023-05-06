@@ -54,7 +54,7 @@
        android:id="@+id/fragment_container_view"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:name="com.example.assignment3.activities.BooksUserFragment"
+       android:name="com.example.assignment3.activities.BookListUserFragment"
        tools:layout="@layout/fragment_books_user"
        android:layout_below="@+id/top"/>
 

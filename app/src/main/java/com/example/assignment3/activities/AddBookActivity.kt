@@ -8,7 +8,7 @@ import com.example.assignment3.models.Book
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class BookAddActivity : SnackBarActivity() {
+class AddBookActivity : SnackBarActivity() {
 
     lateinit var title: String
     lateinit var description: String

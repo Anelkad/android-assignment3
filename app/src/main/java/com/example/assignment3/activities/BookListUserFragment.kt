@@ -18,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
 
-class BooksUserFragment : Fragment {
+class BookListUserFragment : Fragment {
 
     private lateinit var waitDialog: Dialog
 

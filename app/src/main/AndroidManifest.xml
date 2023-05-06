@@ -21,7 +21,7 @@
             android:theme="@style/Theme.Assignment3.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".activities.BookAddActivity"
+            android:name=".activities.AddBookActivity"
             android:exported="false"
             android:theme="@style/Theme.Assignment3.NoActionBar"
             android:windowSoftInputMode="adjustResize" />

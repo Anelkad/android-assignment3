@@ -23,7 +23,7 @@ class DashboardAdminActivity : AppCompatActivity() {
         FirestoreClass().getUserDetails(this)
 
         binding.addBook.setOnClickListener{
-            startActivity(Intent(this,BookAddActivity::class.java))
+            startActivity(Intent(this,AddBookActivity::class.java))
         }
 
         binding.listBook.setOnClickListener {
